@@ -1,0 +1,82 @@
+.productCard {
+    width: 100%;
+    max-width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.productImage{
+    max-width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.productContent {
+    border-top: 2px solid #f2f2f2;
+    padding: 20px;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+}
+
+.productBrand {
+    font-size: 16px;
+    font-weight: 550;
+    color: rgb(37, 37, 37);
+}
+
+.productCondition {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(160, 160, 160);
+}
+
+.productTitle {
+    padding-bottom: 15px;
+    text-align: justify;
+}
+
+.productFooter {
+    border-top: 2px solid #f2f2f2;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productOriginalPrice {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(145, 145, 145);
+    display: block;
+    text-align: right;
+}
+
+.productPrice {
+    font-size: 28px;
+    color: black;
+    font-weight: 550;
+    display: block;
+    text-align: right;
+}
+
+.productButton {
+    border-radius: 7px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    background: #cb96ff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.productButton:hover {
+    color: #ffffff;
+    background: #b681ec;;
+}

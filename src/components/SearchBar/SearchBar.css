@@ -34,7 +34,7 @@
     align-items: center;
     display: flex;
     color: #999999;
-    border-left: 2px solid #f2f2f2;
+    border-left: 1px solid #f2f2f2;
     padding: 0px 13px 0px 13px;
     cursor: pointer;
 }

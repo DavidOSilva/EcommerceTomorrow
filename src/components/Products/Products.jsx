@@ -14,8 +14,6 @@ function Products() {
         })
     }, [])
 
-    console.log(products)
-
     return(
         <section className="products">
             {/* {

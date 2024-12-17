@@ -5,7 +5,7 @@ import './CartButton.css'
 function CartButton(){
     return (
         <div className="cartContainer">
-            <p className="username">Olá, David.</p>
+            <p className="user">Olá, David.</p>
             <button type="button" className="cartButton">
                 <PiShoppingCart />
                 <span className="cartCounter">1</span>
