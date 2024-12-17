@@ -5,8 +5,8 @@ import './SearchBar.css'
 
 function SearchBar(){
 
-    const [searchValue, setSearchValue] = useState('')
-    const clearSearch = () => setSearchValue('')
+    const [searchValue, setSearchValue] = useState('') //Responsável por coletar o que digitamos na barra de pesquisa.
+    const clearSearch = () => setSearchValue('') //É usado para limpar o input da barra de pesquisa.
 
     return (
         <form className='searchBar'>
