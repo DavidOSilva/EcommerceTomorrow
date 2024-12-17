@@ -1,17 +1,13 @@
 import React from "react";
+import propTypes from 'prop-types'
 import { PiShoppingCartFill } from "react-icons/pi";
 import './ProductCard.css'
 
-function ProductCard(){
+function ProductCard({ data }){
+
+    const {price, original_price, title, condition, atributtes} = data
+
     return (
-        // <section className="productCard">
-        //     <img src="http://http2.mlstatic.com/D_948815-MLU76516576246_052024-W.jpg" alt="product-image" className="productImage" />
-        //     <div className="cardInfos">
-        //         <h2 className="cardPrice">R$ 200,99</h2>
-        //         <h2 className="cardTitle">Titulo</h2>
-        //     </div>
-        //     <button>+</button>
-        // </section>
         <section className="productCard">
             <img src="http://http2.mlstatic.com/D_948815-MLU76516576246_052024-W.jpg" alt="product-image" className="productImage" />
             <div className="productContent">
@@ -33,3 +29,7 @@ function ProductCard(){
 }
 
 export default ProductCard
+
+ProductCard.propTypes = {
+    data: propTypes.shape({})
+}.isRequired
