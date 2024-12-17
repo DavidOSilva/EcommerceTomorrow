@@ -1,0 +1,20 @@
+.logo {
+    max-width: 50px;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px 0px 0px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.textContainer {
+    margin-left: 8px;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #9f66d8;
+  }
