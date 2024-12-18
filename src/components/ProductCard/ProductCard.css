@@ -60,6 +60,8 @@
 
 .productPrices {
     text-align: right;
+    display: flex;
+    flex-direction: column;
 }
 
 .productOriginalPrice {
@@ -70,7 +72,9 @@
 }
 
 .productPrice {
-    font-size: 20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
     color: black;
     font-weight: 550;
     display: block;
@@ -84,6 +88,7 @@
     border: none;
     cursor: pointer;
     width: 60px;
+    height: 55px;
     background: #cb96ff;
     transition: background-color 0.3s, transform 0.3s;
 }

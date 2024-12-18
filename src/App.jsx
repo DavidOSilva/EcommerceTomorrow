@@ -1,14 +1,15 @@
-import { useState, React } from 'react'
+import { React } from 'react'
 import Header from './components/Header/Header'
 import Products from './components/Products/Products'
+import HomeProvider from './contexts/Home/HomeProvider'
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Products />
-    </>
+      <HomeProvider>
+          <Header />
+          <Products />
+      </HomeProvider>
   )
 }
 
