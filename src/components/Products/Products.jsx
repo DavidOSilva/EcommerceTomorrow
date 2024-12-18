@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react"
 import fetchProducts from '../../api/fetchProducts'
 import ProductCard from "../ProductCard/ProductCard"
-import Loading from "../Loading/Loading"
+// import Loading from "../Loading/Loading"
+
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import './Products.css'
 
 function Products() {
