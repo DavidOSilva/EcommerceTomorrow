@@ -58,12 +58,15 @@
     bottom: 0;
 }
 
+.productPrices {
+    text-align: right;
+}
+
 .productOriginalPrice {
     font-size: 13px;
     font-weight: 500;
     color: rgb(145, 145, 145);
     display: block;
-    text-align: right;
 }
 
 .productPrice {

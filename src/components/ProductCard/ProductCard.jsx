@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types'
+// import propTypes from 'prop-types'
 import { PiShoppingCartFill } from "react-icons/pi";
 import formatCurrency from '../../utils/formatCurrency'
 import './ProductCard.css'
@@ -34,6 +34,6 @@ function ProductCard({data}){
 
 export default ProductCard
 
-ProductCard.propTypes = {
-  data: propTypes.shape({}),
-}.isRequired;
+// ProductCard.propTypes = {
+//   data: propTypes.shape({}),
+// }.isRequired;
