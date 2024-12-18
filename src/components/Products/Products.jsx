@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import fetchProducts from '../../api/fetchProducts'
-import ProductCard from "../productCard/ProductCard"
+import ProductCard from "../ProductCard/ProductCard"
+import Loading from "../Loading/Loading"
 import './Products.css'
 
 function Products() {
@@ -8,19 +9,15 @@ function Products() {
     const [products, setProducts] = useState([])
 
     useEffect( () => {
-        fetchProducts('console').then(response => {
+        fetchProducts('ps5').then(response => {
             setProducts(response)
-            console.log(products)
         })
-    }, [])
+    }, []) //Executa apenas uma vez graças ao array vazio.
 
     return(
         <section className="products">
-            {/* {
-                products.map((product) => <p>{product.title}</p>)
-            } */}
-
-            <ProductCard/>
+            <Loading />
+            {products.map((product) => <ProductCard key={product.id} data={product} />)}
         </section>
     )
 }

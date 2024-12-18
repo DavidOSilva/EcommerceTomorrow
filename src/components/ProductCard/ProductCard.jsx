@@ -1,26 +1,30 @@
 import React from "react";
 import propTypes from 'prop-types'
 import { PiShoppingCartFill } from "react-icons/pi";
+import formatCurrency from '../../utils/formatCurrency'
 import './ProductCard.css'
 
-function ProductCard({ data }){
+function ProductCard({data}){
 
-    const {price, original_price, title, condition, atributtes} = data
+    const {price, original_price, title, thumbnail, condition, attributes} = data
+    const originalPrice = original_price ?? price*1.3;
+    const translatedCondition = condition === "new" ? "Novo" : condition === "used" ? "Usado" : "";
+    const brand = attributes.find(attr => attr.id === "BRAND")?.value_name ?? "";
 
     return (
         <section className="productCard">
-            <img src="http://http2.mlstatic.com/D_948815-MLU76516576246_052024-W.jpg" alt="product-image" className="productImage" />
+            <img src={thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="product-image" className="productImage" />
             <div className="productContent">
                 <div className="productHeader">
-                    <h2 className="productBrand">SONY</h2>
-                    <h2 className="productCondition">Novo</h2>
+                    <h2 className="productBrand">{brand.toUpperCase()}</h2>
+                    <h2 className="productCondition">{translatedCondition}</h2>
                 </div>
-                <p className="productTitle">Console Playstation 5 Midia Fisica Slim Branco 1tb Returnal E Ratchet E Clank Controle Sem Fio Dualsense Branco</p>
+                <p className="productTitle">{title}</p>
                 <div className="productFooter">
                     <button type="button" className="productButton"><PiShoppingCartFill /></button>
                     <div className="productPrices">
-                        <h2 className="productOriginalPrice"><s>R$ 4599,99</s></h2>
-                        <h2 className="productPrice">R$ 3699,99</h2>
+                        <h2 className="productOriginalPrice"> <s>{formatCurrency(originalPrice)}</s></h2>
+                        <h2 className="productPrice">{formatCurrency(price)}</h2>
                     </div>
                 </div>
             </div>
@@ -31,5 +35,5 @@ function ProductCard({ data }){
 export default ProductCard
 
 ProductCard.propTypes = {
-    data: propTypes.shape({})
-}.isRequired
+  data: propTypes.shape({}),
+}.isRequired;

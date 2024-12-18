@@ -1,12 +1,11 @@
 .cartContainer{
     display: flex;
     align-items: center;
-    margin: 0px 0px 0px 0px;
+    margin-left: 20px;
     padding: 0;
 }
 
 .username {
-    margin-left: 20px;
     font-weight: 500;
     color: #424B54;
 }
@@ -37,4 +36,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 830px) {
+    .username {
+        display: none;
+    }
 }
