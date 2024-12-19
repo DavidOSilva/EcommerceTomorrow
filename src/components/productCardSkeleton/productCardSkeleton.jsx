@@ -14,10 +14,10 @@ function ProductCardSkeleton() {
                     <Skeleton width={100} height={20} />
                     <Skeleton width={60} height={20} baseColor="#f2f2f2" />
                 </div>
-                <div className="productTitle"><Skeleton width={`100%`} height={40}/></div>
+                <div className="productTitle"><Skeleton width={`100%`} height={60}/></div>
                 
                 <div className="productFooter">
-                    <Skeleton retangle height="100%" width={60} baseColor="#dcb9ff" highlightColor="#e0cef2"/>
+                    <Skeleton retangle height={55} width={60} baseColor="#dcb9ff" highlightColor="#e0cef2"/>
                     <div className="productPrices">
                         <Skeleton width={90} height={20} />
                         <Skeleton width={140} height={30} />
