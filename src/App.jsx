@@ -1,17 +1,23 @@
 import { React } from 'react'
-import Header from './components/Header/Header'
-import Products from './components/Products/Products'
+import Home from './pages/Home'
+import Cart from './pages/Cart'
 import HomeProvider from './contexts/Home/HomeProvider'
-import Footer from './components/Footer/Footer'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
   return (
+
       <HomeProvider>
-          <Header />
-          <Products />
-          <Footer/>
+        <BrowserRouter>
+          <Routes>
+              <Route index element={<Home/>} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
       </HomeProvider>
+
   )
 }
 

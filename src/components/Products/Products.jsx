@@ -10,10 +10,13 @@ function Products() {
     const {products, setProducts, isLoading, setLoading} = useContext(HomeContext)
 
     useEffect( () => {
-        fetchProducts('ps5').then(response => {
-            setProducts(response)
-            setLoading(false) //Depois que os dados da API chegam não exibimos mais o skeleton.
-        })
+        if (products.length === 0){
+            setLoading(true);
+            fetchProducts('ps5').then(response => {
+                setProducts(response)
+                setLoading(false) //Depois que os dados da API chegam não exibimos mais o skeleton.
+            })
+        }
     }, []) //Executa apenas uma vez graças ao array vazio.
 
     return(

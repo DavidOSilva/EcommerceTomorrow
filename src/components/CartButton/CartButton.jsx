@@ -1,6 +1,7 @@
 import { PiShoppingCart } from "react-icons/pi";
 import HomeContext from "../../contexts/Home/HomeContext";
 import React, { useContext } from 'react'
+import { Link } from "react-router-dom";
 import './CartButton.css'
 
 function CartButton(){
@@ -9,13 +10,15 @@ function CartButton(){
     const totalItems = cartItems.reduce((total, item) => total + item.amount, 0) //Soma a quantidade de todos os itens no carrinho.
 
     return (
-        <div className="cartContainer">
-            <p className="username">Olá, David.</p>
-            <button type="button" className="cartButton" onClick={() => console.log(cartItems)}>
-                <PiShoppingCart />
-                {cartItems.length > 0 && <span className="cartCounter">{totalItems}</span>}
-            </button>
-        </div>
+        <Link to='/cart'>
+            <div className="cartButtonContainer">
+                <p className="username">Olá, David.</p>
+                <button type="button" className="cartButton" onClick={() => console.log(cartItems)}>
+                    <PiShoppingCart />
+                    {cartItems.length > 0 && <span className="cartCounter">{totalItems}</span>}
+                </button>
+            </div>
+        </Link>
 
     )
 }

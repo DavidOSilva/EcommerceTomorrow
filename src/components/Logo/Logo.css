@@ -1,5 +1,6 @@
 .logo {
     max-width: 50px;
+    padding: 8px;
 }
 
 .logoContainer {
@@ -24,7 +25,11 @@ h2 {
     font-size: 1rem;
 }
 
-@media (max-width: 830px) {
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 1040px) {
     .textContainerLight {
         display: none;
     }

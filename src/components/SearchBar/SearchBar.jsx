@@ -3,16 +3,19 @@ import { TbSearch } from "react-icons/tb";
 import { FaTrash } from "react-icons/fa";
 import fetchProducts from '../../api/fetchProducts';
 import HomeContext from '../../contexts/Home/HomeContext';
+import { useNavigate } from 'react-router-dom'
 import './SearchBar.css'
 
 function SearchBar(){
 
     const {setProducts, setLoading} = useContext(HomeContext) // A barra de pesquisa pode alterar os produtos.
-
     const [searchValue, setSearchValue] = useState('') //Responsável por coletar o que digitamos na barra de pesquisa.
+    const navigate = useNavigate()
+
     const clearSearch = () => setSearchValue('') //É usado para limpar o input da barra de pesquisa.
     const handleSearch = async (event) => {
         event.preventDefault() //Impede o carregamento da página ao realizar uma busca.
+        navigate('/') //Redirecionando para a home após atualizar os produtos.
         setLoading(true) // Altera isLoading no HomeProvider e faz exibir o productCardSkeleton.
         const products = await fetchProducts(searchValue)
         setLoading(false)
