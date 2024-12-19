@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import HomeContext from "./HomeContext";
-import propTypes from 'prop-types'
 
 function HomeProvider( {children}){
 
@@ -23,7 +22,3 @@ function HomeProvider( {children}){
 }
 
 export default HomeProvider
-
-HomeProvider.propTypes = {
-    children: propTypes.any
-}.isRequired

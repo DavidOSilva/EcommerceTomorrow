@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import HomeContext from "../../contexts/Home/HomeContext";
-// import propTypes from 'prop-types'
 import { PiShoppingCartFill } from "react-icons/pi";
-import { BiSolidCartAdd } from "react-icons/bi";
 import formatCurrency from '../../utils/formatCurrency'
 import './ProductCard.css'
 
@@ -53,7 +51,3 @@ function ProductCard({data}){
 }
 
 export default ProductCard
-
-// ProductCard.propTypes = {
-//   data: propTypes.shape({}),
-// }.isRequired;
