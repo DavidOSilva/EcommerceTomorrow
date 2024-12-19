@@ -1,0 +1,55 @@
+.cepBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 70%;
+    min-width: 230px;
+    height: 38px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(137, 137, 137, 0.2);
+    margin: 20px 0px 20px 0px;
+}
+
+.cepInput {
+    padding: 9px 13px 9px 13px;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    font-family: 500px;
+    background: none;
+    flex-grow: 1;
+}
+
+.cepButton {
+    display: flex;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    color: #c8a1ef;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+    background-color: #f2e7fd;
+    border-radius: 8px;
+    margin: 6px;
+}
+
+.cepInput::-webkit-search-cancel-button {
+    display: none;
+}
+
+.cepInput::placeholder {
+    color: rgb(194, 194, 194);
+}
+
+.clearCepButton {
+    border: none;
+    background: none;
+    padding-right: 6px;
+    font-size: 0.75rem;
+    color: #f3b1b1;
+    cursor: pointer;
+}

@@ -15,6 +15,7 @@ function SearchBar(){
     const clearSearch = () => setSearchValue('') //É usado para limpar o input da barra de pesquisa.
     const handleSearch = async (event) => {
         event.preventDefault() //Impede o carregamento da página ao realizar uma busca.
+        if (searchValue.trim() === '') {return}
         navigate('/') //Redirecionando para a home após atualizar os produtos.
         setLoading(true) // Altera isLoading no HomeProvider e faz exibir o productCardSkeleton.
         const products = await fetchProducts(searchValue)

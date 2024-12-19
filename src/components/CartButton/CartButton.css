@@ -8,6 +8,7 @@
 .username {
     font-weight: 500;
     color: #424B54;
+    cursor: pointer;
 }
 
 .cartButton {

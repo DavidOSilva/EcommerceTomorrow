@@ -1,12 +1,11 @@
 import React from 'react'
-import CartSummary from '../CartSummary/CartSummary'
+import CartSummary from '../cartSummary/cartSummary'
 import './Items.css'
 
 function Items(){
-    return (
+    return (  
         <section className='cartContainer'>
             <div className='cartItems'>
-                Oi
             </div>
             <CartSummary />
         </section>

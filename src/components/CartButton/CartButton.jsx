@@ -10,16 +10,15 @@ function CartButton(){
     const totalItems = cartItems.reduce((total, item) => total + item.amount, 0) //Soma a quantidade de todos os itens no carrinho.
 
     return (
-        <Link to='/cart'>
-            <div className="cartButtonContainer">
-                <p className="username">Olá, David.</p>
+        <div className="cartButtonContainer">
+            <p className="username">Olá, David.</p>
+            <Link to='/cart'>
                 <button type="button" className="cartButton" onClick={() => console.log(cartItems)}>
                     <PiShoppingCart />
                     {cartItems.length > 0 && <span className="cartCounter">{totalItems}</span>}
                 </button>
-            </div>
-        </Link>
-
+            </Link>
+        </div>
     )
 }
 
