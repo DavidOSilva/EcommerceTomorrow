@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import HomeContext from "../../contexts/Home/HomeContext";
-import { PiShoppingCartFill } from "react-icons/pi";
+import { FaCartPlus } from "react-icons/fa";
 import formatCurrency from '../../utils/formatCurrency'
 import './ProductCard.css'
 
@@ -39,7 +39,9 @@ function ProductCard({data}){
                 </div>
                 <p className="productTitle">{product.title}</p>
                 <div className="productFooter">
-                    <button type="button" className="productButton" onClick={addToCart}><PiShoppingCartFill /></button>
+                    <button type="button" className="productButton" onClick={addToCart}>
+                        <FaCartPlus />
+                    </button>
                     <div className="productPrices">
                         <h2 className="productOriginalPrice"> <s>{product.originalPrice}</s></h2>
                         <h2 className="productPrice">{product.price}</h2>

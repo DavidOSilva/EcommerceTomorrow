@@ -58,7 +58,6 @@
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
-    bottom: 0;
     align-items: end;
 }
 
@@ -87,6 +86,7 @@
 }
 
 .productButton {
+    position: relative;
     border-radius: 7px;
     font-size: 1.5rem;
     color: #ffffff;
@@ -96,6 +96,9 @@
     height: 55px;
     background: #cb96ff;
     transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
 }
 
 .productButton:hover {

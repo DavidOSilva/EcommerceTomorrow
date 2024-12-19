@@ -1,4 +1,4 @@
-import { React, useContext } from 'react'
+import { React } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import CartButton  from '../CartButton/CartButton';
 import Logo from '../Logo/Logo'

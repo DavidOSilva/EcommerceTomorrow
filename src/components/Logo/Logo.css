@@ -10,8 +10,13 @@
     cursor: pointer;
 }
 
-.textContainer {
+.textContainerLight {
     color: #9f66d8;
+    margin-left: 8px;
+}
+
+.textContainerDark {
+    color: #5c6771;
     margin-left: 8px;
 }
 
@@ -20,7 +25,10 @@ h2 {
 }
 
 @media (max-width: 830px) {
-    .textContainer {
+    .textContainerLight {
+        display: none;
+    }
+    .textContainerDark {
         display: none;
     }
 }
