@@ -1,0 +1,115 @@
+.itemCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px;
+    width: 100%;
+    min-height: 350px;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.itemCardContent {
+    display: flex;
+    height: 100%;
+}
+
+.itemTitle {
+    color: rgb(192, 192, 192);
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.itemCardTitleContainer {
+    padding: 0px 30px 30px;
+    text-align: justify;
+}
+
+.itemCardTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.deleteButton {
+    margin-top: 20px;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    color: #e98080;
+    background-color: rgba(191, 140, 243, 0);
+    font-weight: 650;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deleteButton:hover {
+    background: #ffe8e8;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+ 
+.productImageCart {
+    height: 100%;
+    max-height: 350px;
+}
+
+.itemCardInfos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemCardPrices {
+    display: flex;
+}
+
+.itemPriceContainer {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amountSelectorContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 150px;
+    border: 1px solid rgba(137, 137, 137, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.selectorButton {
+    background: none;
+    border: none;
+    color: #bf8cf3;
+    border-radius: 8px;
+    padding: 4px 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selectorButton:hover {
+    background-color: #f6f2fc;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.selectorButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    color: #d3d3d3;
+    border: none;
+    pointer-events: none;
+}
+ 
+.amountTitle {
+    font-weight: 600;
+}
+
+.itemPrice{
+    font-size: 15px;
+    font-weight: 600;
+}

@@ -6,7 +6,7 @@ import './ProductCard.css'
 
 function ProductCard({data}){
 
-    const {id, price, original_price, title, thumbnail, condition, attributes} = data
+    const {url, id, price, original_price, title, thumbnail, condition, attributes} = data
     const {cartItems, setcartItems} = useContext(HomeContext)
 
     const product = {
@@ -15,8 +15,8 @@ function ProductCard({data}){
         brand: (attributes.find(attr => attr.id === "BRAND")?.value_name ?? "").toUpperCase(),
         translatedCondition: condition === "new" ? "Novo" : condition === "used" ? "Usado" : "",
         title,
-        originalPrice: formatCurrency(original_price ?? price*1.3),
-        price: formatCurrency(price),
+        originalPrice: original_price,
+        price,
         amount: 1,
     }
 
@@ -43,8 +43,8 @@ function ProductCard({data}){
                         <FaCartPlus />
                     </button>
                     <div className="productPrices">
-                        <h2 className="productOriginalPrice"> <s>{product.originalPrice}</s></h2>
-                        <h2 className="productPrice">{product.price}</h2>
+                        <h2 className="productOriginalPrice"><s>{formatCurrency(product.originalPrice ?? price*1.3)}</s></h2>
+                        <h2 className="productPrice">{formatCurrency(product.price)}</h2>
                     </div>
                 </div>
             </div>

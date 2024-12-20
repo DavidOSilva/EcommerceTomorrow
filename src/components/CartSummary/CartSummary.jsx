@@ -24,7 +24,7 @@ function CartSummary(){
     return(
         <div className="cartSummary">
             <div className='summaryHeader'>
-                <h2 className='summaryTitle'>Resumo da Compra</h2>
+                <h2 className='summaryTitle'>Resumo da compra</h2>
             </div>
             <CepBar/>
             <div className='cartContent'>
