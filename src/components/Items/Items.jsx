@@ -7,7 +7,7 @@ import './Items.css'
 
 function Items(){
 
-    const {cartItems, setcartItems} = useContext(HomeContext)
+    const {cartItems} = useContext(HomeContext)
 
     return (  
         <section className='cartContainer'>
