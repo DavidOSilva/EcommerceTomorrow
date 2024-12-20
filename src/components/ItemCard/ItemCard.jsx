@@ -12,7 +12,7 @@
             <div className="itemCardContent">
                 <img src={thumbnail} alt="productImageCart" className="productImageCart"/>
                 <div className="itemCardInfos">
-                    <h2 className="itemTitle">Produto:</h2>
+                    <h2 className="itemTitle mainItemTitle">Produto:</h2>
                     <div className="itemCardTitleContainer">
                         <h2 className="itemCardTitle">{title}</h2>
                         <button className="deleteButton">Remover</button>
