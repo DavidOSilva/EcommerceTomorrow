@@ -39,3 +39,29 @@
 .cartItems:hover {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+.cartEmptyContainer{
+    font-size: 10rem;
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    padding-bottom: 60px;
+}
+
+.cartEmptyTitle {
+    font-size: 32px;
+    color: #a7a7a7;
+    font-weight: 750;
+    padding-bottom: 15px;
+}
+
+.cartEmptySubtitle {
+    font-size: 18px;
+    color: #acacac;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
