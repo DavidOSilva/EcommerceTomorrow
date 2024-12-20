@@ -8,7 +8,7 @@ import './CartSummary.css'
 
 function CartSummary(){
 
-    const {isLoading, shippingData} = useContext(HomeContext)
+    const {isLoadingCep, shippingData} = useContext(HomeContext)
     const address = Object.keys(shippingData).length > 0 ?
         [
             shippingData.logradouro,
@@ -28,7 +28,7 @@ function CartSummary(){
             </div>
             <CepBar/>
             <div className='cartContent'>
-                <p className='cartAddress'>{isLoading ? <Loading /> : address}</p>
+                <p className='cartAddress'>{isLoadingCep ? <Loading /> : address}</p>
                 <div className='cartValues'>
                     <div className='valueItem'>
                         <h2>Frete</h2>

@@ -5,6 +5,7 @@ function HomeProvider( {children}){
 
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true)
+    const [isLoadingCep, setLoadingCep] = useState(false)
     const [cartItems, setcartItems] = useState([])
     const [shippingData, setShippingData] = useState({})
 
@@ -12,6 +13,7 @@ function HomeProvider( {children}){
     const value = {
         products, setProducts,
         isLoading, setLoading,
+        isLoadingCep, setLoadingCep,
         cartItems, setcartItems,
         shippingData, setShippingData,
     }
