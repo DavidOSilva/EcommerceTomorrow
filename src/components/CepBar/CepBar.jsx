@@ -8,7 +8,7 @@ import './CepBar.css'
 
 function CepBar(){
 
-    const {setShippingData} = useContext(HomeContext)
+    const {setShippingData, setLoading} = useContext(HomeContext)
     const [cepValue, setCepValue] = useState('')
     const clearCepValue = () => setCepValue('') //Limpa cepValue, apagando a informação na barra do CEP
 
@@ -20,8 +20,10 @@ function CepBar(){
     const handleCheckCep = async (event) => { //Consulta o CEP na API viacep.
         event.preventDefault() //Impede o carregamento da página.
         if (cepValue.trim() === '') {return}
+        setLoading(true)
         const shippingDataChecked = await fetchAddress(cepValue)
         setShippingData(shippingDataChecked)
+        setLoading(false)
         setCepValue('')
     }
 

@@ -1,7 +1,7 @@
 .loadingIcon {
     font-size: 2rem;
     color: #e6e5e5;
-    margin: 110px auto 100px;
+    margin: 0px auto;
     animation: spin 0.8s linear infinite;
     width: 100%;
 }

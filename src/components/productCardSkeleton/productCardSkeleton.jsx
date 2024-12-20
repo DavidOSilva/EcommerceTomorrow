@@ -3,12 +3,13 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import '../ProductCard/ProductCard.css';
 import Loading from '../Loading/Loading'
+import './ProductCardSkeleton.css'
 
 function ProductCardSkeleton() {
     return (
         <section className="productCard">
             {/* <div className="productImage"><Skeleton height="250px" width="100%" baseColor="#f2f2f2"/></div> */}
-            <div className="productImage"><Loading/></div>
+            <div className="productImageSkeleton"><Loading/></div>
             <div className="productContent">
                 <div className="productHeader">
                     <Skeleton width={100} height={20} />
