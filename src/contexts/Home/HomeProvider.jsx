@@ -6,15 +6,25 @@ function HomeProvider( {children}){
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true)
     const [isLoadingCep, setLoadingCep] = useState(false)
-    const [cartItems, setcartItems] = useState([])
     const [shippingData, setShippingData] = useState({})
+
+    //Inicializa cartItems com dados do localStorage, se existirem. Isso garante persistência.
+    const [cartItems, setcartItems] = useState(() => {
+        const savedCart = localStorage.getItem("cartItems");
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
+
+    const updateCartItems = (newCartItems) => {
+        setcartItems(newCartItems); //Muda o estado como esperado.
+        localStorage.setItem("cartItems", JSON.stringify(newCartItems)); //Mas também salva os dados no localStorage.
+    };
 
     // Todo mundo dentro do provider pode acessar essas informações.
     const value = {
         products, setProducts,
         isLoading, setLoading,
         isLoadingCep, setLoadingCep,
-        cartItems, setcartItems,
+        cartItems, setcartItems: updateCartItems,
         shippingData, setShippingData,
     }
 
