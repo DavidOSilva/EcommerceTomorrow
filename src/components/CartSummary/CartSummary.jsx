@@ -8,7 +8,7 @@ import './CartSummary.css'
 
 function CartSummary(){
 
-    const {isLoadingCep, shippingData} = useContext(HomeContext)
+    const {isLoadingCep, shippingData, cartItems} = useContext(HomeContext)
     const address = Object.keys(shippingData).length > 0 ?
         [
             shippingData.logradouro,
@@ -20,7 +20,9 @@ function CartSummary(){
     const shippingFee = calculateShippingFee(shippingData.regiao);
     const formattedShippingFee = Number.isInteger(shippingFee) ? formatCurrency(shippingFee) : shippingFee;
     const isShippingCalculated = formattedShippingFee !== '—';
-    
+    const subtotal = cartItems.reduce((total, item) => total + item.amount * item.price, 0)
+    const total = isShippingCalculated ? subtotal + shippingFee : subtotal
+
     return(
         <div className="cartSummary">
             <div className='summaryHeader'>
@@ -36,12 +38,12 @@ function CartSummary(){
                     </div>
                     <div className='valueItem'>
                         <h2>Subtotal</h2>
-                        <h2>R$ 13,99</h2>
+                        <h2>{formatCurrency(subtotal)}</h2>
                     </div>
                 </div>
                 <div className='cartTotal'>
                     <h2 className='totalTitle'>Total:</h2>
-                    <h2 className='totalValue'>R$ 73,99</h2>
+                    <h2 className='totalValue'>{formatCurrency(total)}</h2>
                 </div>
                 <button className={`buyButton ${!isShippingCalculated ? 'disabled' : ''}`} disabled={!isShippingCalculated}>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Finalizar</a>
