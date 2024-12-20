@@ -26,7 +26,7 @@
             </div>
             <div className="itemCardPrices">
                 <div className="itemPriceContainer">
-                    <h2 className="itemTitle">Preço:</h2>
+                    <h2 className="itemTitle">Preço unitário:</h2>
                     <h2 className="itemPrice">{formatCurrency(price)}</h2>
                 </div>
                 <div className="itemPriceContainer">

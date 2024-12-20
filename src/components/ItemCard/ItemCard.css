@@ -19,7 +19,7 @@
 }
 
 .mainItemTitle {
-    padding-left: 30px;
+    padding-left: 30px ;
 }
 
 .itemCardTitleContainer {
@@ -60,17 +60,22 @@
 .itemCardInfos{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .itemCardPrices {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 .itemPriceContainer {
-    padding-left: 30px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .amountSelectorContainer{
@@ -83,6 +88,7 @@
     padding: 10px;
     border-radius: 10px;
     margin: 0px 30px 30px;
+    align-items: center;
 }
 
 .selectorButton {
@@ -114,6 +120,6 @@
 }
 
 .itemPrice{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
 }
