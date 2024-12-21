@@ -1,4 +1,4 @@
-#🛒 EcommerceTomorrow ️🛒
+## 🛒 EcommerceTomorrow ️🛒
 
 EcommerceTomorrow é uma aplicação de e-commerce funcional desenvolvida em **[React](https://react.dev/)** e **[Vite](https://vitejs.dev/)**com JavaScript, utilizando uma série de tecnologias para oferecer uma experiência intuitiva e eficiente. O projeto integra consumo de APIs como viacep e do mercado livre, possui também gerenciamento de estado global, persistência de dados, esqueleto de carregamento e um design razoavelmente responsivo, ideal para quem deseja explorar práticas de desenvolvimento frontend.  
 
