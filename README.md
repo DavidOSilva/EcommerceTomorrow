@@ -2,6 +2,30 @@
 
 EcommerceTomorrow é uma aplicação de e-commerce funcional desenvolvida em **[React](https://react.dev/)** e **[Vite](https://vitejs.dev/)** com JavaScript, utilizando uma série de tecnologias para oferecer uma experiência intuitiva e eficiente. O projeto integra consumo de APIs como viacep e do mercado livre, possui também gerenciamento de estado global, persistência de dados, esqueleto de carregamento e um design razoavelmente responsivo, ideal para quem deseja explorar práticas de desenvolvimento frontend.  
 
+## 🚀 Tecnologias Utilizadas  
+
+- **React**: Framework principal para construção da interface.  
+- **React Router**: Gerenciamento de rotas para navegação.  
+- **Context API (Provider)**: Gerenciamento de estado global para o carrinho.  
+- **LocalStorage**: Persistência de dados localmente.  
+- **API do Mercado Livre**: Consumo de dados para exibição dos produtos.  
+- **API ViaCEP**: Consulta de endereços a partir de CEPs.  
+- **CSS Modules**: Estilização modular com escopo local.  
+- **Fetch API**: Realização de requisições para APIs externas.  
+
+## 🖼️ ️Algumas Screenshots. 
+Veja algumas imagens das telas principais do projeto:
+<p align="center">
+    <details>
+        <summary>Clique para mais detalhes</summary>
+        <img src="src/assets/screenshots/home.png" alt="Tela Home" width="800"/>
+        <img src="src/assets/screenshots/search.png" alt="Barra de busca" width="800"/>
+        <img src="src/assets/screenshots/cart.png" alt="Tela Carrinho" width="800"/>
+        <img src="src/assets/screenshots/cep.png" alt="Consulta do CEP" width="800"/>
+    </details>
+  <img src="src/assets/screenshots/navegation.gif" alt="Gif usando a aplicação" width="800">
+</p>
+
 ## 🖥️ Destaques e Funcionalidades.
 - ***Navegação entre Produtos:***
 Permite que os usuários navegue entre os produtos, enquanto consome a  [API mercado livre](https://developers.mercadolivre.com.br/pt_br/guia-para-produtos) para desenvolvedores.
@@ -20,20 +44,7 @@ Utilizando `localStorage` podemos manter os itens que estão armazenados no carr
 - ***Esqueleto de carregamento:***
 Usando a biblioteca `react-loading-skeleton`, podemos criar componentes de carregamento, imitando outros, que podem ser exibidos enquanto funções assíncronas estão sendo executadas, por exemplo enquanto resgatamos os produtos das api.
 
-## 🖼️ ️Algumas Screenshots. 
-Veja algumas imagens das telas principais do projeto:
-<p align="center">
-    <details>
-        <summary>Clique para mais detalhes</summary>
-        <img src="src/assets/screenshots/home.png" alt="Tela Home" width="800"/>
-        <img src="src/assets/screenshots/search.png" alt="Barra de busca" width="800"/>
-        <img src="src/assets/screenshots/cart.png" alt="Tela Carrinho" width="800"/>
-        <img src="src/assets/screenshots/cep.png" alt="Consulta do CEP" width="800"/>
-    </details>
-  <img src="src/assets/screenshots/navegation.gif" alt="Gif usando a aplicação" width="800">
-</p>
-
-## 🚀 Instalação e Dependências.
+## ⚙️ Instalação e Dependências.
 Siga estas etapas para configurar e executar o projeto localmente na sua própria máquina. É necessário instalar o [Node.js](https://nodejs.org/en/download/package-manager) previamente. Este projeto esta usando vite.
 1. Clone o Repositório. 💻
 ```bash
