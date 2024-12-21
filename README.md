@@ -3,9 +3,9 @@
 EcommerceTomorrow é uma aplicação de e-commerce funcional desenvolvida em **[React](https://react.dev/)** e **[Vite](https://vitejs.dev/)** com JavaScript, utilizando uma série de tecnologias para oferecer uma experiência intuitiva e eficiente. O projeto integra consumo de APIs como viacep e do mercado livre, possui também gerenciamento de estado global, persistência de dados, esqueleto de carregamento e um design razoavelmente responsivo, ideal para quem deseja explorar práticas de desenvolvimento frontend.  
 
 ## 🖥️ Destaques e Funcionalidades.
-- ***Navegação entre Produtos:***  
+- ***Navegação entre Produtos:***
 Permite que os usuários navegue entre os produtos, enquanto consome a  [API mercado livre](https://developers.mercadolivre.com.br/pt_br/guia-para-produtos) para desenvolvedores.
-- ***Barra de pesquisa:***  
+- ***Barra de pesquisa:***
 Usando hooks como `useContext`, `useState` e `Provider`, podemos atualizar o array de produtos exibidos na home com uma ajudinha da função `fetchProducts`.
 - ***Carrinho de compras:***
 Usuários podem adicionar qualquer produto da home no seu carrinho de compras, que terá seu valor incrementado no header.
